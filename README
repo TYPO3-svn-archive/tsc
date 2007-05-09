@@ -1,0 +1,46 @@
+
+Running:
+--------
+
+Change into the base directory:
+
+Example 1: src/tsc < ts/input1.ts
+
+Example 2: src/tsc < ts/input2.ts
+
+Example 3: src/tsc < ts/input3.ts
+
+Hint: Example 3 should return with a syntax error on line 7
+      because of an invalid character for the keys.
+
+
+Compiling:
+----------
+
+Change into the directory src/:
+
+ * make
+
+ * make ts1
+
+ * make ts2
+
+ * make ts3
+
+For other targets please see the makefile.
+
+
+
+Alternatively compiling by hand:
+--------------------------------
+
+# create y.tab.h, y.tab.c
+yacc -d tsc.y               
+
+# create lex.yy.c
+lex tsc.l  
+
+# compile and link
+cc lex.yy.c y.tab.c -o tsc 
+
+

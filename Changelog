@@ -1,0 +1,17 @@
+
+##############################################
+# Current Version: 0.2.0
+##############################################
+
+07-05-09 Elmar Hinz  <elmar.hinz@team-red.net>
+
+	* Version 0.2.0
+	* Generates a PHP array as output
+	* Import to typo3xdev on sourceforge.net
+	* Published under LGPL 
+
+07-05-06 Elmar Hinz  <elmar.hinz@team-red.net>
+
+	* Version 0.1.0
+	* Tokenizer and syntax checker
+
