@@ -231,10 +231,10 @@ char* make_keystring() {
 		kptr = kptr->next;
 	}
 
-	/* Prepending "$TS". */
+	/* Prepending "$ts". */
 	char *tmp = str;
-	str = (char *) malloc(strlen(str) + strlen("$TS") + 1); 
-	sprintf(str, "$TS%s", tmp); 
+	str = (char *) malloc(strlen(str) + strlen("$ts") + 1); 
+	sprintf(str, "$ts%s", tmp); 
 	return str;
 }
 

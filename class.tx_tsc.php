@@ -57,9 +57,9 @@ class tx_tsc {
 		fclose($pipe);
 
 		// Evaluate the array
-		$TS = array();
+		$ts = array();
 		eval($arrayString);
-		return $TS;
+		return $ts;
 	}
 
 	function _readErrors($pipe){

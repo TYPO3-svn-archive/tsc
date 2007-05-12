@@ -1,7 +1,5 @@
 
-// We expect errors for 'fünf', 'zwölf', 'fünfzehn' due to invalid umlauts in keys,
-// While they are valid as value. 
-
+// Here we show how braces trigger levels
 
 value = in level 0
 level1{
@@ -24,3 +22,15 @@ level1{
 }
 antherValue = another value in level 0
 
+
+// setting multiple levels by dots
+
+value1 = in base 
+levelA.levelB {
+	value1 = in level B
+	levelC.levelD {
+		value1 = in level D
+	}
+	value2 = back in level B
+}
+value2 = back in base 

@@ -1,17 +1,27 @@
 
-Running:
---------
+Running the PHP demo:
+-----------------------
+
+Put the directories into your webserver.
+Set src/tsc to be exacutable.
+Call examples/demo.php via http.
+
+
+Running on commandline:
+-----------------------
 
 Change into the base directory:
 
-Example 1: src/tsc < ts/input1.ts
+Example 1: src/tsc < examples/input1.ts
 
-Example 2: src/tsc < ts/input2.ts
+Example 2: src/tsc < examples/input2.ts
 
-Example 3: src/tsc < ts/input3.ts
+etc. 
 
-Hint: Example 3 should return with a syntax error on line 7
-      because of an invalid character for the keys.
+Have a look into the examples/ directory to find out wich examples are 
+currently available. 
+
+Hint: Some examples contain syntax errors to test the error discovery.
 
 
 Compiling:
@@ -28,7 +38,6 @@ Change into the directory src/:
  * make ts3
 
 For other targets please see the makefile.
-
 
 
 Alternatively compiling by hand:
