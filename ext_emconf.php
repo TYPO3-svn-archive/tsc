@@ -16,7 +16,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'author' => 'Elmar Hinz',
 	'author_email' => 'elmar.hinz@team-red.net',
 	'author_company' => 'Team Red',
-	'version' => '0.2.0',
+	'version' => '0.2.1',
 );
 
 ?>
