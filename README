@@ -1,6 +1,8 @@
 
-Running the PHP demo:
------------------------
+Home: http://t3flyers.wordpress.com/
+
+Running as PHP demo:
+---------------------
 
 Put the directories into your webserver.
 Set src/tsc to be exacutable.
