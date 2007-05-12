@@ -11,8 +11,8 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'TypoScript Compiler (TSC)',
-	'description' => 'Tokenizer and syntax checker,  that compiles TypoScript to a PHP array.',
-	'category' => 'plugin',
+	'description' => 'Tokenizer and syntax checker to compile TypoScript to a PHP array.',
+	'category' => 'misc',
 	'author' => 'Elmar Hinz',
 	'author_email' => 'elmar.hinz@team-red.net',
 	'author_company' => 'Team Red',
