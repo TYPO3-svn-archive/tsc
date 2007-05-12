@@ -2,14 +2,14 @@
 
 #--- Running ---------------------------------------------------
 
-ts1 : cleansilent tsc ../ts/input1.ts  
-		./tsc < ../ts/input1.ts	
+ts1 : cleansilent tsc ../examples/input1.ts  
+		./tsc < ../examples/input1.ts	
 
-ts2 : cleansilent tsc ../ts/input2.ts
-	./tsc < ../ts/input2.ts
+ts2 : cleansilent tsc ../examples/input2.ts
+	./tsc < ../examples/input2.ts
 
-ts3 : cleansilent tsc ../ts/input3.ts
-	./tsc < ../ts/input3.ts
+ts3 : cleansilent tsc ../examples/input3.ts
+	./tsc < ../examples/input3.ts
 
 
 #--- Making ---------------------------------------------------
