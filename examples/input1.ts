@@ -1,11 +1,17 @@
 
-keyA1.keyA2.keyA3 = valueA1 valueA2
+// Here you see different styles of comments.
+// This one starts with 2 slashes at the begin of a line.
+  // Whitespace is allowed before a comment.
+	// This one is indented by a tab.
 
-keyB1.keyB2.keyB3 = valueB1	valueB2
+# This is the second type of a comment.
+# It starts with a block sign.
+  # Again whitespace indent is allowed.
+	# This one is indented by a tab.
 
-keyC1.keyC2 (
-	hallo welt
-	hallo welt
+a.valueblock (
+  # Within a value block comments are not possible.
+  // They would become part of the value.
 )
 
-keyD = value D
+

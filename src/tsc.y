@@ -93,6 +93,7 @@ script_component:
 
 script_block:                             
 	key '{' NEWLINE { mark_level(keys); } script_block_body '}' { 
+		poplevel(); unmark_level(keys); 
 		$$=$5; 
 	}
 	;
@@ -191,6 +192,10 @@ key *pushkey(char *name) {
  
 void mark_level(key *kptr) {
 	kptr->is_level = 1;	
+}
+
+void unmark_level(key *kptr) {
+	kptr->is_level = 0;	
 }
 
 int is_level(key *kptr) {

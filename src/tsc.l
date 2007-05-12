@@ -42,6 +42,7 @@ ASSIGN								[=]
 BACKSLASH							[\\]
 BLANK      						[\t ]+
 BRACE									[{}]
+COMMENTLINE						^[\t ]*(#|\/\/).*$
 DOT										[\.]
 ENDLINE								[\t ]*\n
 KEY										[A-Za-z0-9]+
@@ -54,6 +55,7 @@ VALUE									[^'\r\t\n\\ ]*
 <keyMode,INITIAL>{
 	{ASSIGN}							BEGIN(valueMode); 									return ASSIGN; 
 	{BRACE}																										return *yytext;
+	{COMMENTLINE} 																						;
 	{DOT}																											return DOT;
 	{ENDLINE}																		yylineno++; 	return NEWLINE; 
 	{KEY} 								YYSTR 															return KEY; 

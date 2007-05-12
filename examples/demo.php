@@ -1,13 +1,10 @@
-<html>
-<body>
-<h1>Demonstration of the TypoScript Compiler</h1>
-<?php controller(); ?>
-</body>
-</html>
 <?php
 
+define('COMPILER',  '../src/tsc');
+define('LIBRARY',  '../class.tx_tsc.php');
+
 function controller() {
-	require_once('../class.tx_tsc.php');
+	require_once(LIBRARY);
 	exec('ls *.ts', $files);
 	foreach($files as $file) {
 		print view(model($file));
@@ -15,13 +12,12 @@ function controller() {
 }
 
 function model($file) {
-	$compiler = '../src/tsc';
 	$out['file'] = $file;
 	foreach(file($file) as $line) {
 		$out['typoLines']  .= sprintf("%5d  %s",  ++$i, $line);
 		$out['typoScript'] .= $line;
 	}
-	list($out['array'], $out['errors']) = tx_tsc::compile($out['typoScript'], $compiler);
+	list($out['array'], $out['errors']) = tx_tsc::compile($out['typoScript'], COMPILER);
 	return $out;
 }
 
@@ -32,3 +28,9 @@ function view($model) {
 }
 
 ?>
+<html>
+<body>
+<h1>Demonstration of the TypoScript Compiler</h1>
+<?php controller(); ?>
+</body>
+</html>
